@@ -1,0 +1,401 @@
+#no-mobile {
+  position: absolute;
+  z-index: 99;
+  height: 100vh;
+  background-color: black;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  top: 0;
+  color: white;
+}
+
+@media screen and (max-width: 645px) {
+  #no-mobile {
+    display: none;
+  }
+}
+
+body {
+  background-color: rgb(175, 214, 236);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.status-bar {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column {
+  width: 33%;
+}
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.status-bar__column .fa-battery-full {
+  margin: 0px 5px;
+}
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+  margin-top: 50px;
+}
+#login-form input {
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#login-form input::placeholder {
+  color: gray;
+}
+#login-form input:focus {
+  border-color: black;
+}
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+}
+
+.nav {
+  background-color: #f9f9fa;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+  bottom: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+.nav__btn {
+  text-decoration: none;
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__link {
+  position: relative;
+  color: #2e363e;
+}
+.nav__notification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  animation: notificationAnimation 2s ease-in-out infinite;
+}
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(360deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.friends-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.friends-header__title {
+  font-size: 32px;
+}
+.friends-header__icons span {
+  margin-left: 25px;
+}
+.me {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.me__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+.me__text {
+  margin-right: 370px;
+  margin-bottom: 20px;
+}
+.me__text__name {
+  font-size: 22px;
+}
+.me__text__status {
+  font-size: 17px;
+}
+.harry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.harry__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 30px;
+  margin-left: 5px;
+}
+.harry__text__name {
+  font-size: 22px;
+  margin-right: 380px;
+}
+.ron {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ron__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 30px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.ron__text__name {
+  font-size: 22px;
+  margin-right: 395px;
+}
+.ginny {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ginny__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 30px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.ginny__text__name {
+  font-size: 22px;
+  margin-right: 370px;
+}
+.luna {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.luna__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 30px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.luna__text__name {
+  font-size: 22px;
+  margin-right: 370px;
+}
+.neville {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.neville__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 30px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.neville__text__name {
+  font-size: 22px;
+  margin-right: 370px;
+}
+.chats-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chats-header__title {
+  font-size: 32px;
+}
+.chats-header__icons span {
+  margin-left: 25px;
+}
+.main-screen {
+  padding: 0px;
+}
+.ron {
+  width: 100%;
+}
+.harry {
+  width: 100%;
+  margin-top: 15px;
+}
+.ginny {
+  width: 100%;
+  margin-top: 15px;
+}
+.chats__image {
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+}
+.chats__name {
+  margin-right: 380px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.chats__notification {
+  width: 30px;
+  height: 30px;
+  background-color: tomato;
+  border-radius: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: -10px;
+}
+.find-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.find-header__title {
+  font-size: 32px;
+}
+.find-header__icons span {
+  margin-left: 25px;
+}
+.more-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.more-header__title {
+  font-size: 32px;
+}
+.more-header__icons span {
+  margin-left: 25px;
+}
+.find-news__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+.find-news__content__image {
+  width: 200px;
+  height: 150px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.find-news__content__text {
+  margin-left: 10px;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
+.openchat {
+  margin-top: 30px;
+}
+.find-icons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.find-icons__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.openchat-gryffindor {
+  display: flex;
+  align-items: space-between;
+}
+.openchat-gryffindor__image__p {
+  width: 100px;
+  height: 100px;
+  margin-left: 280px;
+}
+.profile {
+  display: flex;
+}
+.profile__box__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 30px;
+}
+.profile__box__name {
+  margin-left: 10px;
+  font-weight: bold;
+}
+.profile__box__mail {
+  margin-left: 10px;
+}
+.profile__box:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fa-comment-alt {
+  margin-left: 250px;
+  margin-top: 20px;
+}
+.icon-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.icon-row__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.more-suggestions__title {
+  margin-top: 70px;
+  font-size: 20px;
+}
+.more-suggestions__icons {
+  display: flex;
+}
+.more-suggestions__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.more-suggestions__icon:nth-child(2) {
+  margin-left: 30px;
+}
